@@ -6,8 +6,8 @@
                     Enter your scheduling details
                 </div>
                 <div>
-                    <q-input color="secondary" v-model="person" label="Person to message" />
-                    <q-input color="secondary" v-model="message" label="Message you would like to send" />
+                    <q-input color="primary" v-model="person" label="Person to message" />
+                    <q-input color="primary" v-model="message" label="Message you would like to send" />
                 </div>
                 <div>
                     <div class="q-pa-md" style="max-width: 300px">
@@ -40,7 +40,7 @@
                 </div>
             </q-card-section>
             <q-card-actions align="right">
-                <q-btn icon="add" color="secondary"/>
+                <q-btn icon="add" color="primary"/>
             </q-card-actions>
         </q-card>
     </div>

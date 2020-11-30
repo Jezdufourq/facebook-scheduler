@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header>
+    <q-header class="bg-white">
       <div class="row justify-center">
         <div class="col-auto text-h1 text-bold text-black">
           SCHEDULER
