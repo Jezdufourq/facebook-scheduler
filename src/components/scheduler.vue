@@ -6,6 +6,7 @@
                     Enter your scheduling details
                 </div>
                 <div>
+                    <q-input class="q-py-md" color="primary" v-model="name" label="Name of the scheduler" />
                     <q-input class="q-py-md" color="primary" v-model="person" label="Person to message" />
                     <q-input class="q-py-md" color="primary" v-model="message" label="Message you would like to send" />
                     <q-input class="q-py-md" filled v-model="date">
@@ -49,6 +50,7 @@ export default {
   name: 'scheduler',
   data () {
     return {
+      name: '',
       person: '',
       message: '',
       date: date.formatDate(Date.now(), 'YYYY-MM-DD HH:mm')
@@ -56,6 +58,15 @@ export default {
   },
   methods: {
     submitData () {
+      var updatedScheduler = {
+        name: this.name,
+        person: this.person,
+        message: this.message,
+        date: this.date
+      }
+
+      console.log('obj: ' + JSON.stringify(updatedScheduler))
+      this.$store.commit('updateCurrentSchedulers', updatedScheduler)
     }
   }
 }
