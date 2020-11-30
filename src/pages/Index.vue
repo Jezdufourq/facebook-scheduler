@@ -1,15 +1,19 @@
 <template>
   <q-page class="flex flex-center">
-    <scheduler />
+    <!-- <scheduler /> -->
+    <table-scheduler />
   </q-page>
 </template>
 
 <script>
-import Scheduler from 'src/components/scheduler.vue'
+import tableScheduler from 'src/components/tableScheduler.vue'
+// import scheduler from 'src/components/scheduler.vue'
+
 export default {
   name: 'PageIndex',
   components: {
-    Scheduler
+    // scheduler,
+    tableScheduler
   }
 }
 </script>
