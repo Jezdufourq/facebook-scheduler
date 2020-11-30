@@ -34,6 +34,16 @@ export default {
   components: {
     Scheduler
   },
+  computed: {
+    data: {
+      get () {
+        return this.$store.getCurrentSchedulers
+      },
+      set (payload) {
+        this.store.commit('updateCurrentSchedulers', payload)
+      }
+    }
+  },
   data () {
     return {
       dialogOpen: false,
@@ -60,13 +70,6 @@ export default {
           label: 'Schedule Date',
           field: 'date',
           sortable: true
-        }
-      ],
-      data: [
-        {
-          name: 'Test Name',
-          person: 'Test Person',
-          date: date.formatDate(Date.now(), 'YYYY-MM-DD HH:mm')
         }
       ]
     }
