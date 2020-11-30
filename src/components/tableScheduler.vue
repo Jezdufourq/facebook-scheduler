@@ -122,7 +122,7 @@ export default {
         date: this.date
       }))
       // closing dialog + resetting data
-      this.openDialog = false
+      this.dialogOpen = false
       this.name = ''
       this.person = ''
       this.message = ''
